@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puk's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logov2.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="design-page.html">Selected works</a></li>
+                <li><a href="ai-page.html">AI</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span class="auto-type"></span></h1>
+        </div>
+    </div>
+</div>
+<!-- -------------------------about------------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/mev2.png" class="Me">
+            </div>  
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                </p>Hey there! I'm Puk de Graaf, based in the city of Rotterdam. I'm a creative thinker and aspiring architect with a passion for all things creative, from videography and photography to the exciting world of architecture. I'm particularly enthusiastic about improving design processes through Artificial Intelligence, aiming to bring fresh perspectives and efficiency to the field. Alongside my architectural aspirations, I've gained valuable experience as a freelance video creator, refining my storytelling and visual skills. If you want to know more, feel free to explore my portfolio!
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('toolkit')">Toolkit</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Architectural Design</span><br>Designing the built environment</li>
+                        <li><span>Machine Learning</span><br>Applying Machine learning techniques in the design process</li>
+                        <li><span>Creative production</span><br>Videography, Photography, Music production, and graphic design</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="toolkit">
+                    <ul>
+                        <li><span>3D (parametric) Design</span><br>Rhino and Grasshopper</li>
+                        <li><span>Visualisation</span><br>Illustrator, Photoshop, InDesign</li>
+                        <li><span>Development</span><br>Python, HTML, CSS, JS</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024 - Current</span><br>Master Architecture - TU Delft</li>
+                        <li><span>2019 - 2023</span><br>Bachelor Bouwkunde - TU Delft</li>
+                        <li><span>2013 - 2019</span><br>VWO - Scheldemond College </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<!-----------portfolio------------- -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <a href="design-page.html">
+                    <img src="images/interior1.png">  
+                    <div class="layer">
+                        <h2>Design</h2>
+                    </div> 
+                </a>
+            </div>
+            <div class="work">
+                <a href="ai-page.html">
+                    <img src="images/ai1.png">
+                    <div class="layer">
+                        <h2>Artificial Intelligence</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="work">
+                <a href="photography-page.html">
+                    <img src="images/photography1.png">
+                    <div class="layer">
+                         <h2>Photography</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope" style="color: #d7de72;"></i>pukdeg@hotmail.com</p>
+                <!----<form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows='6' placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form> -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var typed = new Typed(".auto-type", {
+            strings: ["Puk", "Puk", "Designing", "Coding", "Visualising", "Imagining", "Crafting", "Enjoying"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        });
+    });
+</script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Work - Puk's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logov2.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="design-page.html">Selected works</a></li>
+                <li><a href="ai-page.html">AI</a></li>
+                <li><a href="index.html">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text-ai">
+            <h1>Artificial Intelligence</h1>
+        </div>
+    </div>
+</div>
+
+<div id="design-work">
+    <div class="container">
+        <div class="project-gallery">
+            <div class="project">
+                <div class="project-info">
+                    <h2>/ Computational Intelligence for Integrated Design</h2>
+                    <h4>MsC elective - 2024</h4>
+                    <p>In this course, I dived into the world of artificial intelligence, exploring the state-of-the-art applications of AI in the built environment. I was introduced to various machine learning techniques and tasked with a design assignment aimed at applying one or more of these techniques to a project relevant to the design process.
+                        The tool I developed addresses the current limitations in managing the Urban Heat Island (UHI) effect. Urban designers and architects often lack tools to assess the potential impact of their interventions on the UHI effect. Traditional UHI maps are static, relying on large-scale measurements that quickly become outdated. Additionally, urban designers cannot predict temperature changes when replacing greenery with buildings or vice versa. I aimed to solve this by using machine learning to predict the UHI effect based on satellite images and aerial photos, providing real-time predictions of critical hotspots. This tool enables architects and urban planners to make more informed design decisions to minimize the UHI effect.
+                    </p>
+                </div>
+
+                <!-- Floorplan - Text to the Right -->
+                <div class="project layout-right" style="--image-width: 60%;">
+                    <div class="project-images">
+                        <img src="images/mapnl1.png" alt="Floorplan 1">
+                    </div>
+                    <div class="project-images">
+                        <img src="images/UHI1.png" alt="Floorplan 1">
+                    </div>
+                    <div class="project-info">For this project, I used a Generative Adversarial Network (GAN), a machine learning technique well-suited for image-to-image translation tasks. The model was trained on pairs of images: satellite images as input and corresponding UHI maps as output. Essentially, the model learns the characteristics of the input images that influence the target images (UHI maps). After learning these characteristics, it can generate UHI maps from new satellite images.
+                        I began by creating a large dataset of satellite images and their corresponding UHI maps. I divided the Netherlands into chunks of 2x2 kilometers, pairing the corresponding chunks to serve as input for training the model. The final dataset contained 8300 image pairs. After many days of experimenting with different training settings, I identified the best training configuration and selected the most effective model for testing and evaluation.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="white-space"></div>
+
+                <h2>/ Test results</h2>
+                <!-- Section - Text Below -->
+                <div class="project layout-below">
+                    <div class="project-images">
+                        <img src="images/testuhi.png" alt="Section 1">
+                    </div>
+                <div class="project-info">
+                    <p>The results were promising. The model accurately predicted areas without the UHI effect, producing a full blue image for rural landscapes, indicating no temperature increase. For urban landscapes, the model roughly predicted the location of hotspots and recognized the impact of greenery and water bodies on reducing the UHI effect. While the temperature predictions were somewhat accurate, they were not perfect, and the hotspot locations were not always precise. This could be due to the images lacking broader contextual information about their surroundings.
+                        For experimental purposes, I also tested the model on images at a larger scale than it was trained on. Surprisingly, it managed to predict the UHI effect with reasonable accuracy on these larger-scale images as well. This suggests that the model can be scaled up by dividing larger maps into chunks and combining the predicted UHI maps to form a comprehensive larger map.
+                        </p>
+                </div>
+
+                </div>
+                
+                <div class="white-space"></div>
+
+                <div class="project-info">
+                    <h2>/ UHI Prediction Tests</h2>
+                    <p>To further test the tool's utility for architects, I altered satellite images by replacing buildings with greenery and vice versa, then analyzed the effect on the UHI predictions. The results were encouraging. When replacing buildings with parks, the predicted UHI map showed a temperature reduction, indicating that the model could assess the impact of such interventions. Similarly, the model predicted an increase in temperature when greenery was replaced with buildings.
+                    </p>
+                </div>
+
+                <!-- Interior - Text to the Left -->
+                <div class="project layout-left" style="--image-width: 50%;">
+                    <div class="project-images">
+                        <img src="images/gif33.gif" alt="GIF 3">
+                    </div>
+                    <div class="project-images">
+                        <img src="images/gif22.gif" alt="GIF 2">
+                    </div>
+                </div>
+
+            <div class="project">
+                <div class="project-info">
+                    <p>This course has been a significant milestone in my journey as an aspiring architect. By diving into the world of artificial intelligence and machine learning, I gained valuable skills in coding, data analysis, and model training. The project challenged me to apply these skills creatively and practically, enhancing my problem-solving abilities and technical proficiency. <br>
+                        <br>Developing the UHI prediction tool taught me how to handle large datasets, preprocess satellite images, and implement a Generative Adversarial Network (GAN) for image-to-image translation tasks. I also improved my experimental design, testing, and evaluation, allowing me to iterate and improve the model effectively. <br>
+                        <br>The experience underscored the potential of AI in making informed design decisions, particularly in addressing the Urban Heat Island effect. It has inspired me to further explore the integration of AI in architecture and urban design, aiming to create more sustainable and resilient built environments. <br>
+                        <br>This project is a testament to my commitment to pushing the boundaries of traditional design methodologies and leveraging new technology to solve real-world challenges. For a more in-depth explanation of the tool's development and training process, the full report can be downloaded <a href="C:\Users\pukde\OneDrive\Bureaublad\Uni vakken\master\Digital Portfolio\code\PORTFOLIO PUK\images\ART0202_FinalReport_PukdeGraaf_Grade9.pdf" download>here</a>. <br>
+                        <br>I am excited to continue experimenting with AI and its applications in architecture, always striving to make impactful contributions to the field.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
